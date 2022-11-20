@@ -8,29 +8,28 @@ import { Car } from './car';
   styleUrls: ['./car-list.component.scss']
 })
 export class CarListComponent {
-  car : Car[] = [{
-    brand:"Ford",
+  cars : Car[] = [{
+    brand:"ford",
     model:2000,
     year:2021,
     color:"blue",
-    price:2200000,
+    price:2000,
     image:"assets/fordk.jpg"
   },
   {
-    brand:"Nissan",
+    brand:"nissan",
     model:2000,
     year:2021,
     color:"blue",
-    price:2200000,
+    price:2500,
     image:"assets/fordk.jpg"
   },
   {
-    brand:"TOYOTA",
+    brand:"toyota",
     model:2000,
     year:2021,
     color:"blue",
-    price:2200000,
+    price:3000,
     image:"assets/fordk.jpg"
   }]
-
 }
