@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { bufferToggle } from 'rxjs';
+import { CarDataService } from '../car-data.service';
 import { Car } from './car';
 
 @Component({
@@ -8,7 +9,9 @@ import { Car } from './car';
   styleUrls: ['./car-list.component.scss']
 })
 export class CarListComponent {
-  cars : Car[] = [{
+  cars : Car[] = [];
+  
+  /* [{
     brand:"ford",
     model:2000,
     year:2021,
@@ -31,5 +34,12 @@ export class CarListComponent {
     color:"blue",
     price:3000,
     image:"assets/fordk.jpg"
-  }]
+  }] */
+  constructor (private carsDataService:CarDataService) {
+
+  }
+  ngOnInit():void{
+    this.carsDataService.getAll().subscribe( cars => this.cars = cars);
+  }
+
 }
