@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { BrandDataService } from '../brand-data.service';
 import { Brand } from '../brand-list/brand';
 
@@ -9,14 +10,21 @@ import { Brand } from '../brand-list/brand';
 })
 export class CreateBrandsComponent {
 
+  brandForm = new FormGroup({
+    id: new FormControl(''),
+    brand: new FormControl(''),
+  })
+
   constructor(private brandsDataService:BrandDataService) { }
 
   createBrand() {
-    let brand : Brand = {
-      'id':5,
-      'brand':'ferra'
-    }
-    this.brandsDataService.create(brand);
+    // let brand : Brand = {
+    //   'id':5,
+    //   'brand':'ferra'
+    // }
+    // this.brandsDataService.create(brand);
+    //this.brandsDataService.create(this.brandForm.value);
+    console.log(this.brandForm.value);
   }
 }
 
