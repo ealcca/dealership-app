@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Brand } from './brand';
 
 @Component({
   selector: 'brand-list',
@@ -7,8 +8,16 @@ import { Component } from '@angular/core';
 })
 export class BrandListComponent {
 
-  brand = {  
+  brands : Brand[] = [{  
     id: 1,
     brand:"toyota"
-  }
+  },
+  {  
+    id: 2,
+    brand:"ford"
+  },
+  {  
+    id: 3,
+    brand:"chevrolet"
+  }]
 }
