@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BrandDataService } from '../brand-data.service';
 import { Brand } from './brand';
 
 @Component({
@@ -8,7 +9,9 @@ import { Brand } from './brand';
 })
 export class BrandListComponent {
 
-  brands : Brand[] = [{  
+  brands : Brand[] = [];
+  
+  /* [{  
     id: 1,
     brand:"toyota"
   },
@@ -19,5 +22,10 @@ export class BrandListComponent {
   {  
     id: 3,
     brand:"chevrolet"
-  }]
+  }] */
+  constructor(private brandsDataService:BrandDataService) { }
+
+  ngOnInit():void {
+    this.brandsDataService.getAll().subscribe(brands => this.brands = brands);
+  }
 }
