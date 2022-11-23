@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { CarListComponent } from './car-list/car-list.component';
 import { CarsComponent } from './cars/cars.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { BrandListComponent } from './brand-list/brand-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarListComponent,
     CarsComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    BrandListComponent
   ],
   imports: [
     BrowserModule,
