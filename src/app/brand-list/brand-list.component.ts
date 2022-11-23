@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class BrandListComponent {
 
+  brand = {  
+    id: 1,
+    brand:"toyota"
+  }
 }
