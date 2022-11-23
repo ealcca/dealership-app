@@ -11,6 +11,7 @@ import { BrandListComponent } from './brand-list/brand-list.component';
 import { BrandsComponent } from './brands/brands.component';
 import { CreateBrandsComponent } from './create-brands/create-brands.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CreateCarsComponent } from './create-cars/create-cars.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutUsComponent,
     BrandListComponent,
     BrandsComponent,
-    CreateBrandsComponent
+    CreateBrandsComponent,
+    CreateCarsComponent
   ],
   imports: [
     BrowserModule,
