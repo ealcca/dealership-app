@@ -1,11 +1,11 @@
-<form>
-    <!-- <div class="mb-3">
+<form [formGroup]="brandForm" (ngSubmit)="createBrand()">
+    <div class="mb-3">
       <label for="id" class="form-label">Id</label>
-      <input type="" class="form-control" id="id">
-    </div> -->
+      <input type="number" class="form-control" id="id" formControlName="id">
+    </div>
     <div class="mb-3">
       <label for="brand" class="form-label">Brand</label>
-      <input type="text" class="form-control" id="brand">
+      <input type="text" class="form-control" id="brand" formControlName="brand">
     </div>
-    <button type="submit" class="btn btn-primary" (click)="createBrand()">crear</button>
+    <button type="submit" class="btn btn-primary">crear</button>
 </form>
