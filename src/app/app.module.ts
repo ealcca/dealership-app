@@ -9,6 +9,8 @@ import { CarsComponent } from './cars/cars.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { BrandListComponent } from './brand-list/brand-list.component';
 import { BrandsComponent } from './brands/brands.component';
+import { CreateBrandsComponent } from './create-brands/create-brands.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { BrandsComponent } from './brands/brands.component';
     CarsComponent,
     AboutUsComponent,
     BrandListComponent,
-    BrandsComponent
+    BrandsComponent,
+    CreateBrandsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

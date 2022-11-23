@@ -15,4 +15,16 @@ export class BrandDataService {
   getAll(): Observable<Brand[]> {
     return this.http.get<Brand[]>(URL);
   }
+
+  create(brand:Brand):void {
+    this.http.post<Brand>(URL, brand).subscribe({
+      error: error => {
+        console.error('fgd',error);
+      },
+      next: data => {
+        console.log(data);
+      }
+    });
+  }
+  
 }
