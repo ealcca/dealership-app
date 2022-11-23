@@ -8,7 +8,7 @@ import { CarListComponent } from './car-list/car-list.component';
 import { CarsComponent } from './cars/cars.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { BrandListComponent } from './brand-list/brand-list.component';
-import { BrandComponent } from './brand/brand.component';
+import { BrandsComponent } from './brands/brands.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { BrandComponent } from './brand/brand.component';
     CarsComponent,
     AboutUsComponent,
     BrandListComponent,
-    BrandComponent
+    BrandsComponent
   ],
   imports: [
     BrowserModule,
