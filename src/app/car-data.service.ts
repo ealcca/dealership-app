@@ -16,4 +16,15 @@ export class CarDataService {
     return this.http.get<Car[]>(URL);
   }
   
+  create(car:any):void {
+    this.http.post<any>(URL, car).subscribe({
+      error: error => {
+        console.error('CHECKK ERROR',error);
+      },
+      next: data => {
+        console.log(data);
+      }
+    });
+  }
+
 }
