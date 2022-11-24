@@ -11,7 +11,7 @@ import { Brand } from '../brand-list/brand';
 export class CreateBrandsComponent {
 
   brandForm = new FormGroup({
-    id: new FormControl(''),
+    //id: new FormControl(''),
     brand: new FormControl(''),
   })
 
@@ -23,8 +23,8 @@ export class CreateBrandsComponent {
     //   'brand':'ferra'
     // }
     // this.brandsDataService.create(brand);
-    //this.brandsDataService.create(this.brandForm.value);
-    console.log(this.brandForm.value);
+    // console.log(this.brandForm.value);
+    this.brandsDataService.create(this.brandForm.value);
   }
 }
 
