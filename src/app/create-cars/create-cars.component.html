@@ -1,1 +1,27 @@
-<p>create-cars works!</p>
+<form [formGroup]="carForm" (ngSubmit)="createCar()">
+    <div class="mb-3">
+      <label for="brandname" class="form-label">brandname</label>
+      <input type="text" class="form-control" id="brandname" formControlName="brandname">
+    </div>
+    <div class="mb-3">
+      <label for="model" class="form-label">model</label>
+      <input type="text" class="form-control" id="model" formControlName="model">
+    </div>
+    <div class="mb-3">
+      <label for="year" class="form-label">year</label>
+      <input type="number" class="form-control" id="year" formControlName="year">
+    </div>
+    <div class="mb-3">
+      <label for="color" class="form-label">color</label>
+      <input type="text" class="form-control" id="color" formControlName="color">
+    </div>
+    <div class="mb-3">
+        <label for="price" class="form-label">price</label>
+        <input type="number" class="form-control" id="price" formControlName="price">
+    </div>
+    <!-- <div class="mb-3">
+        <label for="image" class="form-label">image</label>
+        <input type="text" class="form-control" id="image" formControlName="image">
+    </div> -->
+    <button type="submit" class="btn btn-primary">crear</button>
+</form>
