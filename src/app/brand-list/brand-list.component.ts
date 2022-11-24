@@ -26,6 +26,6 @@ export class BrandListComponent {
   constructor(private brandsDataService:BrandDataService) { }
 
   ngOnInit():void {
-    this.brandsDataService.getAll().subscribe(brands => this.brands = brands);
+    this.brandsDataService.brands.subscribe(brands => this.brands = brands);
   }
 }

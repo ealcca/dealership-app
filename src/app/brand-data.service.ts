@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Brand } from './brand-list/brand';
 
 const URL = "http://localhost:3000/brands";
@@ -10,11 +10,19 @@ const URL = "http://localhost:3000/brands";
 })
 export class BrandDataService {
 
-  constructor(private http: HttpClient) { }
+  private _brands : Brand[] = [];
+  private _brandsSubjects : BehaviorSubject<Brand[]> = new BehaviorSubject(this._brands);
+  public brands: Observable<Brand[]> = this._brandsSubjects.asObservable(); 
 
-  getAll(): Observable<Brand[]> {
-    return this.http.get<Brand[]>(URL);
+  constructor(private http: HttpClient) { 
+    this.http.get<Brand[]>(URL).subscribe(data => {
+      this._brands.push(...data);
+    });
   }
+
+  /* getAll(): Observable<Brand[]> {
+    return this.http.get<Brand[]>(URL);
+  } */
 
   create(brand:any):void {
     this.http.post<Brand>(URL, brand).subscribe({
@@ -22,7 +30,7 @@ export class BrandDataService {
         console.error('CHECKK ERROR',error);
       },
       next: data => {
-        console.log(data);
+        this._brands.push(data);
       }
     });
   }
