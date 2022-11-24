@@ -17,7 +17,7 @@ export class CarDataService {
   }
   
   create(car:any):void {
-    this.http.post<any>(URL, car).subscribe({
+    this.http.post<Car>(URL, car).subscribe({
       error: error => {
         console.error('CHECKK ERROR',error);
       },

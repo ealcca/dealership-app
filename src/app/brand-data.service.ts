@@ -17,7 +17,7 @@ export class BrandDataService {
   }
 
   create(brand:any):void {
-    this.http.post<any>(URL, brand).subscribe({
+    this.http.post<Brand>(URL, brand).subscribe({
       error: error => {
         console.error('CHECKK ERROR',error);
       },
