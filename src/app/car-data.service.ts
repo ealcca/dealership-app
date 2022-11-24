@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Car } from './car-list/car';
 
 const URL = "http://localhost:3000/cars";
@@ -10,11 +10,19 @@ const URL = "http://localhost:3000/cars";
 })
 export class CarDataService {
 
-  constructor(private http: HttpClient) { }
+  private _cars : Car[] = [];
+  private _carsSubjects : BehaviorSubject<Car[]> = new BehaviorSubject(this._cars);
+  public cars: Observable<Car[]> = this._carsSubjects.asObservable(); 
 
+  constructor(private http: HttpClient) { 
+    this.http.get<Car[]>(URL).subscribe(data => {
+      this._cars.push(...data);
+    });
+  }
+  /* 
   getAll(): Observable<Car[]> {
     return this.http.get<Car[]>(URL);
-  }
+  } */
   
   create(car:any):void {
     this.http.post<Car>(URL, car).subscribe({
@@ -22,7 +30,7 @@ export class CarDataService {
         console.error('CHECKK ERROR',error);
       },
       next: data => {
-        console.log(data);
+        this._cars.push(data);
       }
     });
   }

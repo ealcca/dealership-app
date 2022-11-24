@@ -28,7 +28,7 @@ export class CreateCarsComponent {
   constructor(private carsDataService:CarDataService, private brandsDataService:BrandDataService) { }
 
   ngOnInit():void{
-    this.brandsDataService.getAll().subscribe( brands => this.brands = brands);
+    this.brandsDataService.brands.subscribe( brands => this.brands = brands);
   }
 
   createCar() {
