@@ -19,6 +19,13 @@
         <label for="price" class="form-label">price</label>
         <input type="number" class="form-control" id="price" formControlName="price">
     </div>
+    <div class="mb-3">
+      <label for="brandId" class="form-label">Brands</label>
+      <select class="form-control" name="brandId" id="brandId" formControlName="brandId">
+        <option *ngFor="let brand of brands" [value]="brand.id">{{brand.brand}}</option>
+      </select>
+    </div>
+
     <!-- <div class="mb-3">
         <label for="image" class="form-label">image</label>
         <input type="text" class="form-control" id="image" formControlName="image">
