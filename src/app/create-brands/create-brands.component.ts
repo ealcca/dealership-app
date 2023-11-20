@@ -12,7 +12,7 @@ export class CreateBrandsComponent {
 
   brandForm = new FormGroup({
     //id: new FormControl(''),
-    brand: new FormControl(''),
+    trademark: new FormControl(''),
   })
 
   constructor(private brandsDataService:BrandDataService) { }
