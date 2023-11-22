@@ -14,14 +14,14 @@ export class CreateCarsComponent {
 
   brands : Brand[] = [];
 
-  carForm = new FormGroup({
+    carForm = new FormGroup({
     brandname: new FormControl(''),
     brandId: new FormControl(''),
     model: new FormControl(''),
     year: new FormControl(''),
     color: new FormControl(''),
     price: new FormControl(''),
-    image: new FormControl('asset/fordk.jpg'),
+    image: new FormControl('assets/fordk.jpg'),
     
   }) 
 
@@ -32,18 +32,6 @@ export class CreateCarsComponent {
   }
 
   createCar() {
-    /* let car : Car = {
-      'brandname':'zafari',
-      'model':'fere',
-      'year':2121,
-      'color':'red',
-      'price':2000,
-      'image':'assets/fordk.jpg',
-    }
-  this.carsDataService.create(car); */
- 
-  //console.log(this.carForm.value);
-
   this.carsDataService.create(this.carForm.value);
   }
 }
