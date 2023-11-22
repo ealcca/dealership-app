@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dealership';
+  logo = 'GAMA MULTIMARCAS';
+  imglogo = "assets/logo.jpg";
   year = new Date().getFullYear();
 }
