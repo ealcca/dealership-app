@@ -2,8 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Brand } from './brand-list/brand';
+import {environment} from '../environments/environment';
 
-const URL = "http://localhost:3000/brands";
+const URL = environment.apiUrl + 'brands';
 
 @Injectable({
   providedIn: 'root'
