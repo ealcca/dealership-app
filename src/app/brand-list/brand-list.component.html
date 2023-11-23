@@ -1,14 +1,21 @@
-<table class="table">
+<div class="container-fluid table-brand-list">
+  <table class="table">
     <thead>
       <tr>
+        <th scope="col">Actions</th>
         <th scope="col">Id</th>
-        <th scope="col">Brand</th>
+        <th scope="col">Trademark</th>
       </tr>
     </thead>
     <tbody>
         <tr *ngFor="let brand of brands">
-            <td>{{brand.id}}</td>
-            <td>{{brand.trademark | uppercase}}</td>
+            <td class="size-table-accion">
+              <button type="button" class="btn me-md-2 btn-danger btn-sm">Delete</button>
+              <button type="button" class="btn me-md-2 btn-danger btn-sm">Modify</button>
+            </td>
+            <td class="size-table-id">{{brand.id}}</td>
+            <td class="size-table-trademark">{{brand.trademark | uppercase}}</td>
         </tr>
     </tbody>
-</table>
+  </table>
+</div>
