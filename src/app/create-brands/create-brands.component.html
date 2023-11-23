@@ -1,11 +1,10 @@
-<form [formGroup]="brandForm" (ngSubmit)="createBrand()">
-    <!-- <div class="mb-3">
-      <label for="id" class="form-label">Id</label>
-      <input type="number" class="form-control" id="id" formControlName="id">
-    </div> -->
+<form [formGroup]="brandForm" (ngSubmit)="createBrand()" class="needs-validation form-create-brands" novalidate>
     <div class="mb-3">
       <label for="trademark" class="form-label">Brand</label>
-      <input type="text" class="form-control" id="trademark" formControlName="trademark">
+      <input type="text" class="form-control form-control-sm" id="trademark" formControlName="trademark" required>
+      <div class="invalid-feedback">
+        * Campo obligatorio
+      </div>
     </div>
-    <button type="submit" class="btn btn-primary">Add</button>
+    <button type="submit" class="btn btn-primary btn-sm">Add +</button>
 </form>
