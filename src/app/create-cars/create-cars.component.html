@@ -1,30 +1,32 @@
-<h2>Add car</h2>
-<form [formGroup]="carForm" (ngSubmit)="createCar()">
+
+<div class="container-fluid">
+  <form [formGroup]="carForm" (ngSubmit)="createCar()" class="form-create-cars">
     <div class="mb-3">
       <label for="brandname" class="form-label">brandname</label>
-      <input type="text" class="form-control" id="brandname" formControlName="brandname">
+      <input type="text" class="form-control form-control-sm" id="brandname" formControlName="brandname">
     </div>
     <div class="mb-3">
-      <label for="model" class="form-label">model</label>
-      <input type="text" class="form-control" id="model" formControlName="model">
+      <label for="model" class="form-label">MODEL</label>
+      <input type="text" class="form-control form-control-sm" id="model" formControlName="model">
     </div>
     <div class="mb-3">
-      <label for="year" class="form-label">year</label>
-      <input type="number" class="form-control" id="year" formControlName="year">
+      <label for="year" class="form-label">YEAR</label>
+      <input type="text" class="form-control form-control-sm" id="year" formControlName="year">
     </div>
     <div class="mb-3">
-      <label for="color" class="form-label">color</label>
-      <input type="text" class="form-control" id="color" formControlName="color">
+      <label for="color" class="form-label">COLOR</label>
+      <input type="text" class="form-control form-control-sm" id="color" formControlName="color">
     </div>
     <div class="mb-3">
-      <label for="price" class="form-label">price</label>
-      <input type="number" class="form-control" id="price" formControlName="price">
+      <label for="price" class="form-label">PRICE</label>
+      <input type="text" class="form-control form-control-sm" id="price" formControlName="price">
     </div>
     <div class="mb-3">
-      <label for="brandId" class="form-label">Brands</label>
-      <select class="form-control" name="brandId" id="brandId" formControlName="brandId">
+      <label for="brandId" class="form-label">BRANDS</label>
+      <select class="form-control form-control-sm" name="brandId" id="brandId" formControlName="brandId">
         <option *ngFor="let brand of brands" [value]="brand.id">{{brand.trademark}}</option>
       </select>
     </div>
-    <button type="submit" class="btn btn-primary">crear</button>
-</form>
+    <button type="submit" class="btn btn-primary btn-sm">New</button>
+  </form>
+</div>
