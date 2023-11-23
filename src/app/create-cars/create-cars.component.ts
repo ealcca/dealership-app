@@ -16,7 +16,7 @@ export class CreateCarsComponent {
 
     carForm = new FormGroup({
     //brandname: new FormControl(''),
-    brandId: new FormControl(''),
+    brand: new FormControl(''),
     model: new FormControl(''),
     year: new FormControl(''),
     color: new FormControl(''),
@@ -32,6 +32,7 @@ export class CreateCarsComponent {
   }
 
   createCar() {
+    console.log(this.carForm)
   this.carsDataService.create(this.carForm.value);
   }
 }

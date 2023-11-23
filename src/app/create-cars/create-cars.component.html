@@ -22,8 +22,8 @@
       <input type="text" class="form-control form-control-sm" id="price" formControlName="price">
     </div>
     <div class="mb-3">
-      <label for="brandId" class="form-label">BRANDS</label>
-      <select class="form-control form-control-sm" name="brandId" id="brandId" formControlName="brandId">
+      <label for="brand" class="form-label">BRANDS</label>
+      <select class="form-control form-control-sm" name="brand" id="brand" formControlName="brand">
         <option *ngFor="let brand of brands" [value]="brand.id">{{brand.trademark}}</option>
       </select>
     </div>
