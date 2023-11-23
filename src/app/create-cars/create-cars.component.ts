@@ -15,7 +15,7 @@ export class CreateCarsComponent {
   brands : Brand[] = [];
 
     carForm = new FormGroup({
-    brandname: new FormControl(''),
+    //brandname: new FormControl(''),
     brandId: new FormControl(''),
     model: new FormControl(''),
     year: new FormControl(''),
