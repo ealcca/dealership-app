@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'dealership';
   logo = 'GAMA MULTIMARCAS';
-  imglogo = "assets/logo.jpg";
+  imglogo = "assets/logo.png";
   year = new Date().getFullYear();
 }
