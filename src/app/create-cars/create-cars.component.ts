@@ -21,7 +21,7 @@ export class CreateCarsComponent {
     year: new FormControl(''),
     color: new FormControl(''),
     price: new FormControl(''),
-    image: new FormControl('assets/fordk.jpg'),
+    //image: new FormControl('assets/fordk.jpg'),
     
   }) 
 
