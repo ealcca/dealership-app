@@ -19,11 +19,7 @@ export class BrandDataService {
       this._brands.push(...data);
     });
   }
-
-  /* getAll(): Observable<Brand[]> {
-    return this.http.get<Brand[]>(URL);
-  } */
-
+  
   create(brand:any):void {
     this.http.post<Brand>(URL, brand).subscribe({
       error: error => {
@@ -33,6 +29,5 @@ export class BrandDataService {
         this._brands.push(data);
       }
     });
-  }
-  
+  }  
 }

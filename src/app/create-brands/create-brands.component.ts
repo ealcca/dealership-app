@@ -18,13 +18,7 @@ export class CreateBrandsComponent {
   constructor(private brandsDataService:BrandDataService) { }
 
   createBrand() {
-    // let brand : Brand = {
-    //   'id':5,
-    //   'brand':'ferra'
-    // }
-    // this.brandsDataService.create(brand);
-    // console.log(this.brandForm.value);
-    this.brandsDataService.create(this.brandForm.value);
+     this.brandsDataService.create(this.brandForm.value);
   }
 }
 

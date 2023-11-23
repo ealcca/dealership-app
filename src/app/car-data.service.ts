@@ -19,11 +19,7 @@ export class CarDataService {
       this._cars.push(...data);
     });
   }
-  /* 
-  getAll(): Observable<Car[]> {
-    return this.http.get<Car[]>(URL);
-  } */
-  
+
   create(car:any):void {
     this.http.post<Car>(URL, car).subscribe({
       error: error => {
@@ -34,5 +30,4 @@ export class CarDataService {
       }
     });
   }
-
 }
