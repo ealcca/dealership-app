@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { bufferToggle } from 'rxjs';
 import { CarDataService } from '../car-data.service';
 import { Car } from './car';
+//import { Brand} from './brand';
+import { BrandDataService } from '../brand-data.service';
 
 @Component({
   selector: 'car-list',
@@ -11,8 +13,9 @@ import { Car } from './car';
 
 export class CarListComponent {
   cars : Car[] = [];
-  
-  constructor (private carsDataService:CarDataService) { }
+ // brands: Brand[] = [];
+
+  constructor (private carsDataService:CarDataService, private brandDataService:BrandDataService) { }
   
   ngOnInit():void{
     this.carsDataService.cars.subscribe( cars => this.cars = cars);
