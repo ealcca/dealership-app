@@ -12,9 +12,8 @@ on:
       - completed
 
 jobs:
-  deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+  deploy:    
     runs-on: ubuntu-latest 
-    
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
     - run: curl -X POST -d {} ${{ secrets.DEPLOY_HOOK }}
